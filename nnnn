@@ -1,0 +1,37 @@
+
+// let activeFolderId = null;
+
+// async function openFolder(folderId,name) {
+//     activeFolderId=folderId;
+
+//     const res = await fetch('http://localhost:5000/api/files/${folderId}')
+
+//     const files = await res.json()
+
+//     const container = document.querySelector("#foldergr")
+//     container.innerHTML=''
+    
+//     files.forEach(file=>{
+//         container.innerHTML+=`
+//         <div class="items">
+//         <div class="pic"></div>
+//         <div class="name">${file.fileName}</div>
+//         <div class="date">${new Date(file.date).toLocaleDateString()}</div>
+//         </div>
+//         `
+//     })
+// }
+    
+// async function uploadToFolder() {
+//     const FormData = new formData()
+//     formData.append('file',fileInput.files[0])
+//     formData.append('fileName',fileNameInput.value)
+
+//     await fetch('http://localhost:5000/api/upload/${activeFolderId}',
+//         {
+//             method:"POST",
+//             body:formData
+//         })
+
+//         openFolder(activeFolderId)
+// }
