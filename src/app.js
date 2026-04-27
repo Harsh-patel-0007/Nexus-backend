@@ -16,7 +16,7 @@ const verifyTokens= require("./middleware/auth.middleware")
 
 // ✅ Allow your frontend origin
 app.use(cors({
-    origin: 'https://nexus-repo-ten.vercel.app',  // ← your frontend port (Live Server default)
+    origin: 'https://nexus-repo-six.vercel.app/',  // ← your frontend port (Live Server default)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials:true
