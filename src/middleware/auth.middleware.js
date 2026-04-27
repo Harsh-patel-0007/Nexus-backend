@@ -10,12 +10,13 @@ function verifyTokens(req,res,next){
 
     if(!token){
         return res.status(401).json({
-            message:"Not authenticated"
-        })
+            message:"Not authenticated"})
+    
+        
     }
 
         try{
-            const decoded = jwt.verify(token,process.env.JWT_SECRET)
+            const decoded = jwt.verify(token,"mysecretkey123")
             req.user = decoded
             console.log("decoded user:",decoded)
             next()

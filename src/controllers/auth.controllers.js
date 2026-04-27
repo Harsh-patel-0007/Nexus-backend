@@ -31,7 +31,7 @@ async function  registerUser(req,res) {
     const token = jwt.sign({
         id:user._id,
         email:user.email
-    }, process.env.JWT_SECRET)
+    }, "mysecretkey123")
 
     res.cookie("token",token,{
         httpOnly:true,
